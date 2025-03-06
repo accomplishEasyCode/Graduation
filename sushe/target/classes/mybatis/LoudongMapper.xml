@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.LoudongMapper">
+
+    <resultMap id="rmLoudong" type="loudong">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result column="bjid"></result>
+        <collection property="units" select="getUnits" ofType="bunit"  column="{id=id,bjid=bjid}">
+        </collection>
+
+    </resultMap>
+
+    <resultMap id="rmPingfen" type="com.daowen.vo.PingfenVo">
+        <id column="id" property="id"></id>
+        <result property="name" column="name"></result>
+        <collection property="hygienes" ofType="com.daowen.vo.Qshygiene" javaType="java.util.List">
+            <id column="qsid" property="id"></id>
+            <result column="qsname" property="name"></result>
+            <result column="ldname" property="ldname"></result>
+
+            <result column="score" property="score"></result>
+            <result column="weekname" property="weekname"></result>
+        </collection>
+    </resultMap>
+
+
+    <select id="rzstat"  parameterType="map" resultType="map">
+            select *  from (    select
+                   b.id,
+                   b.name as ldname,
+                   count(*) as totalcount,
+                   COUNT(case when cicount<![CDATA[>]]>0 then 1 else null end) as checkincount,
+                   COUNT(case when cicount<![CDATA[=]]>0 then 1 else null end) as notcheckincount
+                    from  loudong b
+                    left join bunit qs
+                    on qs.ldid=b.id
+                    where  1=1
+                    group  by b.name,b.id) temp
+
+                    <if test="ldid!=null">
+                        where temp.id=#{ldid}
+                    </if>
+
+    </select>
+
+
+
+
+
+    <select id="getPingfens"   resultMap="rmPingfen"  parameterType="map">
+
+        select  b.*,
+        qs.id as qsid,
+        b.name as ldname,
+        qs.name as qsname,
+        pf.score,
+        w.name as weekname
+        from  loudong b
+        left join bunit qs
+        on qs.ldid=b.id
+        left  join
+        (select * from  qspingfen pf
+        <if test="weekid!=null">
+            where pf.weekid=#{weekid}
+        </if>
+        )  pf on
+        pf.qsid=qs.id
+        left join termweek w
+        on w.id=pf.weekid
+
+        where 1=1
+        <if test="name!=null">
+            and b.name like '%${name}%'
+        </if>
+
+
+    </select>
+
+
+
+    <select id="getUnits" parameterType="map" resultType="bunit">
+        select
+        bu.*
+        from bunit  bu
+        where 1=1
+        <if test="id!=null">
+            and bu.ldid=#{id}
+        </if>
+        <if test="bjid!=0">
+            and bu.bjid=#{bjid}
+        </if>
+
+    </select>
+
+      <select id="getEntityPlus"   resultMap="rmLoudong"  parameterType="map">
+                 select  l.*
+                 <choose>
+                     <when test="bjid!=null">,${bjid} as bjid</when>
+                     <otherwise>,0 as bjid</otherwise>
+                 </choose>
+
+                 from  loudong l
+                where 1=1
+                 <if test="name!=null">
+                     and l.name like '%${name}%'
+                 </if>
+
+
+      </select>
+      
+     <select id="loadPlus"    resultMap="rmLoudong"  parameterType="map">
+         select  l.*
+         <choose>
+             <when test="bjid!=null">,${bjid} as bjid</when>
+             <otherwise>,0 as bjid</otherwise>
+         </choose>
+         from  loudong l
+         where 1=1
+         <if test="id!=null">
+             and l.id=#{id}
+         </if>
+
+      </select>
+      
+
+
+</mapper>
+
+

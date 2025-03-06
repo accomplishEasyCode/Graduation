@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.CaigouMapper">
+
+
+      <select id="getEntityPlus"   resultType="caigou">
+                 select  c.*,
+                   u.username as cgaccount,
+                   u.realname as cgren,
+                   s.name as supplyorname,
+                   sp.name as spname
+                  from  caigou c
+                 left join users u
+                 on u.id=c.userid
+                 left join supplyor s
+                 on s.id=c.supplyid
+                 left join shangpin sp
+                 on sp.id=c.spid
+                 where  1=1
+                 <if test="ddno!=null">
+                     and c.ddno like '%${ddno}%'
+                 </if>
+                 <if test="state!=null">
+                     and c.state=#{state}
+                 </if>
+
+      </select>
+      
+       <select id="loadPlus"   resultType="caigou">
+                   select  c.*,
+                   u.username as cgaccount,
+                   u.realname as cgren,
+                   s.name as supplyorname,
+                   sp.name as spname
+                  from  caigou c
+                 left join users u
+                 on u.id=c.userid
+                 left join supplyor s
+                 on s.id=c.supplyid
+                 left join shangpin sp
+                 on sp.id=c.spid
+                 where  c.id=#{id}
+      </select>
+
+
+
+
+    <select id="cgStat" resultType="hashmap" parameterType="map">
+
+        select c.spid,s.name,
+        sum(c.count) cgcount,
+        sum(c.totalfee) as totalfee
+        from caigou c,
+        shangpin s
+        where c.spid=s.id
+
+        <if test="begdate!=null">
+            and c.createtime>=#{begdate}
+        </if>
+        <if test="enddate!=null">
+            and c.createtime&lt;=#{enddate}
+        </if>
+        group by
+           c.spid,s.name
+        order by cgcount desc
+
+
+
+    </select>
+
+</mapper>
+
+

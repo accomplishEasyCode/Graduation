@@ -1,0 +1,452 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0px;
+}
+#app,html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    font: normal 14px/1.5 Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #F4F6FA;
+}
+
+
+.phead{
+    height: 7.5rem;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    padding: 0rem;
+    background-color: #fff;
+    z-index: 4;
+    border-bottom: 1px solid #EEEEEE;
+    transition: all .2s ease;
+}
+.phead .brand-logo{
+    display: flex;
+    height: 100%;
+    width: 473px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.125rem;
+    color: #0f0f0f;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+
+}
+
+.phead .brand-logo .sys-title{
+    margin-left:12px;
+}
+
+/**
+  头内容
+ */
+ .phead .hcontent{
+    height: 100%;
+    padding-left: 5.3125rem;
+    padding-right: 2.4rem;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.hcontent .cleft .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-nav  .nav-item{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .nav-item:not(first-child){
+    padding-left: 1.3rem;
+}
+
+.nav-control{
+    cursor: pointer;
+    position: absolute;
+    left: 320px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    font-size: 1.4rem;
+    padding: 2px 0.5rem 0;
+    border-radius: 2px;
+
+}
+.nav-control .hamburger {
+    display: inline-block;
+    left: 0px;
+    position: relative;
+    top: 3px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    width: 26px;
+    z-index: 999;
+}
+.nav-control .hamburger .line{
+    background: #FE634E;
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #FE634E !important;
+}
+.hamburger .line:nth-child(1) {
+    width: 20px;
+}
+.hamburger .line:nth-child(2) {
+    width: 26px;
+}
+.hamburger .line:nth-child(3) {
+    width: 22px;
+}
+.round-block {
+    background: #fff;
+    padding: 50px 15px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.hamburger:hover {
+    cursor: pointer; }
+
+.hamburger:hover .line {
+    width: 26px;
+}
+
+.pbody{
+    /*display: flex;*/
+    position:relative;
+}
+.pbody .sidebar{
+    /*width: 21.563rem;*/
+    width:345px;
+    padding-bottom: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(120 130 140 / 13%);
+    transition: all .2s ease;
+    padding-top:22px;
+    overflow-y: scroll;
+}
+
+.pbody .sidebar .addmenu{
+
+    background: #FE634E;
+    color: #fff;
+    padding: 20px 18px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    border-radius: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    margin: 25px 50px;
+
+}
+
+ul.mymenu1  {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    width: 100%;
+
+}
+.mymenu1>li{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin: 0px;
+    padding-left:28px;
+}
+.mymenu1 >li a,.mymenu1>li .itext{
+    font-weight: 500;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px 50px;
+    border-radius: 5rem;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    cursor: pointer;
+    color: #7e7e7e;
+    text-decoration: none;
+    width:100%;
+
+}
+.mymenu1>li a:hover,.mymenu1>li .itext:hover{
+    color:red;
+}
+.mymenu1>li a i,.mymenu1>li .itext i{
+    font-size: 1.4rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: auto;
+    border-radius: 1.25rem;
+    line-height: 1;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-right: 15px;
+}
+
+.mymenu1  .has-arrow:after {
+    position: absolute;
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: initial;
+    right: 1em;
+    -webkit-transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg) translateY(-50%);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    top: 50%;
+    transition: all .3s ease-out;
+}
+
+.mymenu1  .active:after{
+    -webkit-transform: rotate(-135deg) translateY(-50%);
+    transform: rotate(-135deg) translateY(-50%);
+}
+.mymenu1  .active+ul{
+    display: block;
+}
+.mymenu1  .has-arrow:not(.active)+ul{
+    display: none;
+}
+.hide {
+    display: none;
+}
+.pbody .page-wrapper{
+    /*margin-left: 21.563rem;*/
+    margin-left: 345px;
+    z-index: 0;
+    transition: all .2s ease;
+    /*width: 100%;*/
+    padding:8px 10px;
+}
+
+.sidebar::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px #fafafa;
+    background: rgba(0,0,0,.075);
+}
+
+.sidebar::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px #fafafa;
+    border-radius: 0;
+    background: #ececec;
+}
+
+body::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 15px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 15px;
+}
+
+body::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px #fafafa;
+    background: rgba(0,0,0,.075);
+}
+body::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px #fafafa;
+    border-radius: 0;
+    background: #ececec;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.75rem;
+}
+.breadcrumb .item{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.breadcrumb .item+ .item:before{
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #6c757d;
+    content: "/";
+}
+.breadcrumb .item a{
+    color: #656773;
+}
+.breadcrumb .item.active{
+    color: #FE634E;
+    font-weight: 600;
+}
+
+
+.wrap {
+    margin: 0 auto;
+    width: 1260px;
+    box-sizing: content-box;
+}
+
+.com-panel {
+    background: #fff;
+    padding: 12px 15px;
+}
+
+.carousel-panel{
+    width:960px;
+}
+.plat-notice-panel{
+    width:290px;
+    height: 505px;
+    border: 1px solid #eee;
+    padding: 10px;
+
+}
+.plat-notice-panel .title{
+    display: block;
+    margin: 10px 5px 0px;
+    padding-bottom: 10px;
+    padding-left:10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    color:red;
+    position:relative;
+}
+
+.plat-notice-panel .title .more{
+
+    position:absolute;
+    top: 0px;
+    right: 20px;
+
+}
+.plat-notice-panel .title i{
+    margin-right:10px;
+}
+.plat-notice-panel ul{
+    padding: 0px;
+}
+
+.plat-notice-panel ul li{
+    width: 100%;
+    overflow:hidden;
+    padding: 0px 5px 0px 25px;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.fnleft {
+    float: left;
+}
+.fnright{
+    float: right;
+}
+
+
+.menu-wrap2{
+}
+.menu-wrap2 .hd{
+    background: #f56c6c;
+    line-height: 58px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 0;
+    position: relative;
+    zoom: 1;
+}
+.menu-wrap2 .bd {
+    min-height: 740px;
+    background: #f0f0f0;
+}
+.menu-wrap2 .bd .item{
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    line-height: 50px;
+    font-size: 14px;
+    padding: 0 20px 0 25px;
+}
+
+.menu-wrap2 .bd .item a{
+    display: inline-block;
+
+}
+.menu-wrap2 .bd .item a i{
+    margin-left: 38px;
+}
+
+.sysconfig {
+    margin-left: 12px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    background: #f0f0f0;
+    min-height: 800px;
+}
+.sysconfig .hd .title{
+    font-size: 22px;
+    border-bottom: 1px solid #d0d5d7;
+    line-height: 80px;
+    height: 80px;
+    display: block;
+}
+.sysconfig .bd{
+    padding: 32px 20px;
+    font-size: 14px;
+    line-height:18px ;
+}
+
+.sysconfig .bd img {
+    max-width: 100%;
+}
+

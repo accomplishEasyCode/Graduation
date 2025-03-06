@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/webui/smartbox/images/icon-play.svg"],"names":["module","exports"],"mappings":"mGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d228cce.7d8ebb49.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/icon-play.ac3f32ec.svg\";"],"sourceRoot":""}

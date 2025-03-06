@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.ChafangMapper">
+
+
+      <select id="getEntityPlus"   resultType="map">
+                 select  cf.*,
+                    h.accountname as  targetaccount,
+                    h.name as targetname,
+                    ld.name as ldname,
+                    u.name as unitname
+                  from  chafang cf
+                 left join huiyuan h
+                 on h.id=cf.targetid
+                 left join loudong ld
+                 on ld.id=h.ldid
+                 left  join bunit u
+                 on u.id=h.unitid
+                 where  1=1
+                 <if test="targetid!=null">
+                     and cf.targetid=#{targetid}
+                 </if>
+                 <if test="cfdate!=null">
+                     and cf.cfdate='${cfdate}'
+                 </if>
+      </select>
+      
+       <select id="loadPlus"   resultType="map">
+                   select  cf.*,
+                    h.accountname as  targetaccount,
+                    h.name as targetname,
+                    ld.name as ldname,
+                    u.name as unitname
+                  from  chafang cf
+                 left join huiyuan h
+                 on h.id=cf.targetid
+                 left join loudong ld
+                 on ld.id=h.ldid
+                 left  join bunit u
+                 on u.id=h.unitid
+                 where  cf.id=#{id}
+      </select>
+      
+
+
+</mapper>
+
+

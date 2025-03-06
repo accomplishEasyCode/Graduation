@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e99513e-f7e9-410a-a02f-4bf7d9b0311a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Dormitory\min_rep2\min_rep" />
+        <option name="userSettingsFile" value="E:\Dormitory\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2eE387yHNeVUPtMh5guVRjZNDzf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/桌面/Dapp/crowdfunding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sushe" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.daowen.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e99513e-f7e9-410a-a02f-4bf7d9b0311a" name="Default Changelist" comment="" />
+      <created>1711455748338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711455748338</updated>
+      <workItem from="1711455755199" duration="438000" />
+      <workItem from="1711456484609" duration="1019000" />
+      <workItem from="1711457872880" duration="621000" />
+      <workItem from="1711529684114" duration="712000" />
+      <workItem from="1711531865232" duration="1132000" />
+      <workItem from="1711704739926" duration="287000" />
+      <workItem from="1711705322776" duration="1339000" />
+      <workItem from="1712308867004" duration="646000" />
+      <workItem from="1712545954635" duration="3035000" />
+      <workItem from="1712657207851" duration="541000" />
+      <workItem from="1712657769057" duration="2283000" />
+      <workItem from="1712760856658" duration="13759000" />
+      <workItem from="1712839051574" duration="1513000" />
+      <workItem from="1713105232291" duration="1232000" />
+      <workItem from="1713358208350" duration="644000" />
+      <workItem from="1713417711270" duration="640000" />
+      <workItem from="1713455540334" duration="648000" />
+      <workItem from="1713512497947" duration="612000" />
+      <workItem from="1714445717086" duration="1428000" />
+      <workItem from="1714659886603" duration="323000" />
+      <workItem from="1714742968692" duration="77000" />
+      <workItem from="1714915909303" duration="624000" />
+      <workItem from="1714981262740" duration="607000" />
+      <workItem from="1715001243805" duration="620000" />
+      <workItem from="1715064271221" duration="1930000" />
+      <workItem from="1715222621378" duration="877000" />
+      <workItem from="1715242442824" duration="4562000" />
+      <workItem from="1715309845280" duration="1320000" />
+      <workItem from="1715353973571" duration="5282000" />
+      <workItem from="1715408155032" duration="353000" />
+      <workItem from="1734542297344" duration="629000" />
+      <workItem from="1735045509551" duration="47000" />
+      <workItem from="1740620826506" duration="8000" />
+      <workItem from="1741055400771" duration="207000" />
+      <workItem from="1741162713671" duration="633000" />
+      <workItem from="1741164572614" duration="1189000" />
+      <workItem from="1741225471716" duration="1236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1734542325456">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1734542325456" />
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state width="1877" height="305" key="GridCell.Tab.0.center" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state width="1877" height="305" key="GridCell.Tab.0.left" timestamp="1741227437424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437424" />
+    <state width="1877" height="305" key="GridCell.Tab.0.right" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state width="1877" height="305" key="GridCell.Tab.1.bottom" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state width="1877" height="305" key="GridCell.Tab.1.center" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state width="1877" height="305" key="GridCell.Tab.1.left" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state width="1877" height="305" key="GridCell.Tab.1.right" timestamp="1741227437425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1741227437425" />
+    <state x="647" y="152" width="626" height="735" key="find.popup" timestamp="1741164697506">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="647" y="152" width="626" height="735" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1741164697506" />
+  </component>
+</project>

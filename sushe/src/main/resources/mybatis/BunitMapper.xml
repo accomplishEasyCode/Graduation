@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.BunitMapper">
+
+
+      <select id="getEntityPlus"   resultType="bunit"  parameterType="map">
+                 select  b.*,l.name as ldname,
+                  st.name as typename,
+                  st.renshu as maxcount,
+                  bj.name as bjname
+                  from  bunit b
+                  left join loudong l
+                  on b.ldid=l.id
+                  left join sstype st
+                  on st.id=b.typeid
+                  left join banji bj
+                  on bj.id=b.bjid
+                  where 1=1
+                   <if test="ldid!=null">
+                       and b.ldid=#{id}
+                   </if>
+                  <if test="typeid!=null">
+                      and b.typeid=#{typeid}
+                  </if>
+                  <if test="bjid!=null">
+                      and b.bjid=#{typeid}
+                  </if>
+                   <if test="name!=null">
+                       and b.name like '%${name}%'
+                   </if>
+
+      </select>
+      
+     <select id="loadPlus"   resultType="bunit"  parameterType="map">
+                 select  b.*,l.name as ldname,
+                 st.name as typename,
+                 st.renshu as maxcount,
+                 bj.name as bjname
+                 from  bunit b
+                 left join loudong l
+                 on b.ldid=l.id
+                 left join sstype st
+                 on st.id=b.typeid
+                 left join banji bj
+                 on bj.id=b.bjid
+                 <where>
+                   <if test="id!=null">
+                       and b.id=#{id}
+                   </if>
+                </where>           
+      </select>
+      
+
+
+</mapper>
+
+

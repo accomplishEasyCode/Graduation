@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.BaoxiuMapper">
+
+
+      <select id="getEntityPlus"   resultType="baoxiu">
+                 select  b.*,
+                     u.accountname as bxaccount,
+                     u.name as bxname
+                  from  baoxiu b
+                 left join huiyuan u
+                 on u.id=b.bxrid
+
+                 where  1=1
+                 <if test="ddno!=null">
+                     and ddno like '%${ddno}%'
+                 </if>
+                 <if test="bxrid!=null">
+                     and  bxrid=#{bxrid}
+                 </if>
+      </select>
+      
+       <select id="loadPlus"   resultType="baoxiu">
+                   select  b.*,
+                     u.accountname as bxaccount,
+                     u.name as bxname
+                  from  baoxiu b
+                 left join huiyuan u
+                 on u.id=b.bxrid
+                 where  b.id=#{id}
+      </select>
+      
+
+
+</mapper>
+
+
