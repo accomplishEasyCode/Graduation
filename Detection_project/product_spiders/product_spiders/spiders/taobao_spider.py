@@ -51,7 +51,7 @@ class TaobaoProductSpider(scrapy.Spider):
         self.start_url = f'https://s.taobao.com/search?commend=all&ie=utf8&initiative_id=tbindexz_20170306&page=1&q={self.user_inputs}&tab=all'
         self.product_num = 1  # 商品计数器
         self.page = 1  # 当前页面
-        self.max_page =1  # 最大爬取页数
+        self.max_page =2  # 最大爬取页数
         print(self.start_url)  # 打印起始 URL，方便调试
 
         # 配置 Selenium WebDriver 的选项
@@ -137,7 +137,7 @@ class TaobaoProductSpider(scrapy.Spider):
             except:
                 print("获取页面失败")
                 flag += 1  # 增加重试计数
-                if flag == 5:  # 如果连续 4 次失败，停止爬取
+                if flag == 3:  # 如果连续 4 次失败，停止爬取
                     print("没有下一页，或者网络和页面存在问题")
                     break
         # 关闭 WebDriver
